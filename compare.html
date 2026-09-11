@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KrugerDB vs. Depop, Poshmark, Whatnot &amp; more</title>
+<meta name="description" content="How KrugerDB compares to Depop, Poshmark, Whatnot, StockX, eBay Seller Hub, Vendoo, spreadsheets, and DIY Airtable — feature by feature.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">K</span>
+      <span class="brand-word">KrugerDB</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#product">Product</a>
+      <a href="index.html#numbers">Numbers</a>
+      <a href="compare.html" class="current">Compare</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="mailto:hello@krugerdb.app" class="btn btn-solid">Get a Demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" style="padding-bottom:56px">
+  <div class="wrap" style="max-width:760px">
+    <p class="eyebrow">Head-to-head</p>
+    <h1 style="font-size:clamp(32px,4.6vw,52px)">Marketplaces sell for you.<br>KrugerDB runs the <span class="accent">business</span> behind it.</h1>
+    <p style="font-size:16.5px;line-height:1.7;color:var(--ink-soft);max-width:600px;margin-top:18px">KrugerDB isn't another place to list — it's the inventory and profit layer underneath everywhere you already sell. Here's exactly how it stacks up against the tools resellers actually reach for.</p>
+  </div>
+</header>
+
+<!-- FULL COMPARISON TABLE -->
+<section class="tight" id="table">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Feature comparison</p>
+      <h2 style="font-size:clamp(24px,3vw,32px)">Every feature that matters, side by side.</h2>
+    </div>
+
+    <div class="mini-compare reveal" style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr>
+            <th style="min-width:210px">Feature</th>
+            <th class="us">KrugerDB</th>
+            <th>Depop</th>
+            <th>Poshmark</th>
+            <th>Whatnot</th>
+            <th>Spreadsheet</th>
+            <th>DIY Airtable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI item listing from a photo</td>
+            <td class="us"><span class="mark-yes">✓ Claude AI</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>In-person Market Mode</td>
+            <td class="us"><span class="mark-yes">✓ Native</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Live auctions only</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Barcode / SKU scanning</td>
+            <td class="us"><span class="mark-yes">✓ Add + sell</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Live similar eBay listings</td>
+            <td class="us"><span class="mark-yes">✓ Inline</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Transaction fees</td>
+            <td class="us">None</td>
+            <td><span class="mark-no">10% + processing</span></td>
+            <td><span class="mark-no">20% commission</span></td>
+            <td><span class="mark-no">8% buyer + fees</span></td>
+            <td>None</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Multi-platform inventory</td>
+            <td class="us"><span class="mark-yes">✓ All platforms</span></td>
+            <td><span class="mark-partial">~ Depop only</span></td>
+            <td><span class="mark-partial">~ Poshmark only</span></td>
+            <td><span class="mark-partial">~ Whatnot only</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+          </tr>
+          <tr>
+            <td>Profit-per-item tracking</td>
+            <td class="us"><span class="mark-yes">✓ Full reporting</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+          </tr>
+          <tr>
+            <td>Days-in-inventory / stale alerts</td>
+            <td class="us"><span class="mark-yes">✓ Color-coded</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Formula</span></td>
+            <td><span class="mark-partial">~ Formula</span></td>
+          </tr>
+          <tr>
+            <td>Direct eBay listing push</td>
+            <td class="us"><span class="mark-yes">✓ One tap, live</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Import existing eBay listings</td>
+            <td class="us"><span class="mark-yes">✓ One tap</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Automatic eBay sale detection + real fees</td>
+            <td class="us"><span class="mark-yes">✓ From eBay's own data</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Manual entry</span></td>
+            <td><span class="mark-partial">~ Manual entry</span></td>
+          </tr>
+          <tr>
+            <td>Instagram captions + scheduled posts</td>
+            <td class="us"><span class="mark-yes">✓ Feed + Stories</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Background removal</td>
+            <td class="us"><span class="mark-yes">✓ One tap</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Find inventory (sourcing search)</td>
+            <td class="us"><span class="mark-yes">✓ Keyword + category</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Consignor split tracking</td>
+            <td class="us"><span class="mark-yes">✓ Built in</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+            <td><span class="mark-partial">~ Manual</span></td>
+          </tr>
+          <tr>
+            <td>Role-based access</td>
+            <td class="us"><span class="mark-yes">✓ Built in</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-no">✗</span></td>
+          </tr>
+          <tr>
+            <td>Installable PWA — works offline</td>
+            <td class="us"><span class="mark-yes">✓ PWA</span></td>
+            <td><span class="mark-yes">✓ Native app</span></td>
+            <td><span class="mark-yes">✓ Native app</span></td>
+            <td><span class="mark-yes">✓ Native app</span></td>
+            <td><span class="mark-no">✗</span></td>
+            <td><span class="mark-partial">~ Web only</span></td>
+          </tr>
+          <tr>
+            <td>You own your data</td>
+            <td class="us"><span class="mark-yes">✓ Your Airtable</span></td>
+            <td><span class="mark-no">✗ Platform lock-in</span></td>
+            <td><span class="mark-no">✗ Platform lock-in</span></td>
+            <td><span class="mark-no">✗ Platform lock-in</span></td>
+            <td><span class="mark-yes">✓ Full</span></td>
+            <td><span class="mark-yes">✓ Full</span></td>
+          </tr>
+          <tr>
+            <td>Built for any resale niche</td>
+            <td class="us"><span class="mark-yes">✓ Any niche</span></td>
+            <td><span class="mark-partial">~ Fashion only</span></td>
+            <td><span class="mark-partial">~ Fashion only</span></td>
+            <td><span class="mark-partial">~ Live only</span></td>
+            <td><span class="mark-yes">✓ Anything</span></td>
+            <td><span class="mark-yes">✓ Anything</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITOR PROFILES -->
+<section class="alt" id="profiles">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Where each one actually wins</p>
+      <h2 style="font-size:clamp(24px,3vw,32px)">Every tool has a job. Here's what each is actually for.</h2>
+      <p>None of these are bad tools — they're just built for a different job than running the inventory side of a resale business.</p>
+    </div>
+
+    <div class="bento reveal">
+      <div class="bento-card wide">
+        <div class="bento-title">Depop &amp; Poshmark</div>
+        <div class="bento-desc">Built-in buyer audiences and a mobile-first listing flow make them great for discovery — but neither tracks cost, profit, or anything sold outside their own app, and both take a meaningful cut (10%–20%) of every sale.</div>
+      </div>
+      <div class="bento-card wide">
+        <div class="bento-title">Whatnot</div>
+        <div class="bento-desc">Live video selling drives real urgency for collector audiences, but it requires streaming to sell and has no static listings or inventory system between shows.</div>
+      </div>
+      <div class="bento-card wide">
+        <div class="bento-title">eBay Seller Hub</div>
+        <div class="bento-desc">Massive audience and solid basic reporting — but it's eBay-only, listing is slow without AI, and it has no idea what an item actually cost you. KrugerDB complements it rather than replacing it.</div>
+      </div>
+      <div class="bento-card wide">
+        <div class="bento-title">Vendoo &amp; List Perfectly</div>
+        <div class="bento-desc">Solid for blasting one listing to many marketplaces at once — but at $29–$99/month, with no AI listing, no in-person selling, and no per-item profit tracking.</div>
+      </div>
+      <div class="bento-card wide">
+        <div class="bento-title">Spreadsheets &amp; DIY Airtable</div>
+        <div class="bento-desc">Free, flexible, and fully yours — which is exactly why KrugerDB is built on Airtable, not against it. What's missing is the selling workflow: no photos, no AI, no Market Mode, no eBay sync.</div>
+      </div>
+      <div class="bento-card wide">
+        <div class="bento-title">StockX</div>
+        <div class="bento-desc">Authentication builds real buyer trust for sneakers and streetwear — but it's a narrow category, charges ~9.5% in fees, and offers no inventory management at all.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section id="objections">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Straight answers</p>
+      <h2 style="font-size:clamp(24px,3vw,32px)">The questions every prospect actually asks.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <div class="faq-item open">
+        <button class="faq-q"><span>"I already sell on Depop / Poshmark — isn't that enough?"</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Those are selling platforms, not inventory systems. They only see what's listed on their own app — not what you bought, not what you sold in person, not your real cost and profit. KrugerDB gives you the full picture across everywhere you sell.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>"A spreadsheet works fine for me"</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Until you're at a pop-up with 200 items and someone wants to buy three at once. A spreadsheet has no photos, no scanning, no eBay sync, and no in-person selling mode. KrugerDB handles the whole operation from your phone.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>"What about Vendoo or List Perfectly?"</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Great for blasting listings across marketplaces at volume. But they start at $29/month, have no AI listing, no in-person selling, and no profit tracking — KrugerDB does more for a reseller running their own operation, at a comparable price point.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>"I already list on eBay directly — what more do I need?"</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Seller Hub shows you a sale. KrugerDB shows you the profit — it imports what you've already listed, catches anything that sells or ends without manual checking, and pulls the real fee and shipping numbers from eBay's own data, then nets that against your actual cost.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>"I don't want my data locked into another tool"</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Everything lives in your own Airtable base, which you own outright. Export to CSV anytime. If you stopped using KrugerDB tomorrow, every item, photo, and sale record stays exactly where it is — that's the opposite of lock-in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ink cta-section">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center">Seen enough?</p>
+    <h2>See it running on your actual inventory.</h2>
+    <p>Bring a handful of real items to the demo — we'll list one live, price it against real comps, and show exactly what your setup would look like.</p>
+    <div class="cta-actions">
+      <a href="mailto:hello@krugerdb.app" class="btn btn-solid">Book a Demo</a>
+      <a href="index.html#pricing" class="btn btn-line">See pricing</a>
+    </div>
+    <p class="cta-note">Or email directly: <a href="mailto:hello@krugerdb.app">hello@krugerdb.app</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <a href="index.html" class="brand"><span class="brand-mark">K</span><span class="brand-word">KrugerDB</span></a>
+      <p class="footer-note">Inventory &amp; selling software for independent resellers.<br>Built on Airtable — you own your data.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#product">Product</a>
+      <a href="index.html#numbers">Numbers</a>
+      <a href="compare.html">Compare</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="mailto:hello@krugerdb.app">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
