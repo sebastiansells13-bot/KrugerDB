@@ -560,3 +560,19 @@ footer { border-top: 1px solid var(--line-soft); padding: 40px 0; background: va
   .mini-compare { overflow-x: auto; }
   .mini-compare table { min-width: 560px; }
 }
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+@media print {
+  .nav, .nav-toggle, .btn, .price-ribbon, .phone::before { display: none !important; }
+  a[href]::after { content: none !important; }
+  body { background: #fff; color: #000; }
+  section, .hero, footer { padding: 20px 0 !important; break-inside: avoid; }
+  section.ink, .cta-section { background: #fff !important; color: #000 !important; }
+  .ledger-card { background: #fff !important; color: #000 !important; border: 1px solid #ccc; }
+  .ledger-big-num, .ledger-row .v.gold { color: #000 !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .faq-a { max-height: none !important; }
+  .price-grid, .bento, .trio { break-inside: avoid; }
+}

@@ -26,12 +26,17 @@ function initFaqAccordion() {
   document.querySelectorAll('.faq-item').forEach((item) => {
     const btn = item.querySelector('.faq-q');
     if (!btn) return;
+    btn.setAttribute('aria-expanded', String(item.classList.contains('open')));
     btn.addEventListener('click', () => {
       const wasOpen = item.classList.contains('open');
       item.parentElement.querySelectorAll('.faq-item.open').forEach((other) => {
-        if (other !== item) other.classList.remove('open');
+        if (other !== item) {
+          other.classList.remove('open');
+          other.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+        }
       });
       item.classList.toggle('open', !wasOpen);
+      btn.setAttribute('aria-expanded', String(!wasOpen));
     });
   });
 }
