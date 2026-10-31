@@ -11,7 +11,7 @@
   --panel:     #FFFFFF;
   --ink:       #12141A;
   --ink-soft:  rgba(18,20,26,0.64);
-  --ink-faint: rgba(18,20,26,0.42);
+  --ink-faint: rgba(18,20,26,0.62);  /* ≥4.5:1 on --bg, --bg-alt and white (was 0.42, ~2.7:1) */
   --line:      rgba(18,20,26,0.12);
   --line-soft: rgba(18,20,26,0.07);
 
@@ -22,6 +22,7 @@
 
   --gold:       #D69A1E;    /* amber — AI / highlight */
   --gold-soft:  rgba(214,154,30,0.14);
+  --gold-ink:   #8F5F00;    /* amber for text: ≥4.5:1 on white and --bg-alt */
 
   --coral:      #C84B31;    /* used sparingly: "no" / warning marks */
 
@@ -117,6 +118,12 @@ section.alt { background: var(--bg-alt); }
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+/* Respect the OS "reduce motion" setting: show content immediately. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal.visible { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 
 /* ── buttons ── */
 .btn {
@@ -407,6 +414,7 @@ section.alt { background: var(--bg-alt); }
 /* narrower screens: swipe sideways, with the feature column pinned */
 @media (max-width: 980px) {
   .mini-compare { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  .mini-compare:focus-visible { outline-offset: 2px; border-radius: var(--radius-lg); }
   .mini-compare table { min-width: 640px; }
   .compare-full table { min-width: 880px; }
   .compare-full th:first-child, .compare-full td:first-child {
@@ -420,7 +428,7 @@ section.alt { background: var(--bg-alt); }
 
 .mark-yes { color: var(--accent); font-weight: 700; }
 .mark-no { color: var(--coral); }
-.mark-partial { color: var(--gold); }
+.mark-partial { color: var(--gold-ink); }
 
 /* ==========================================================================
    TIMELINE (how it works)
@@ -617,6 +625,19 @@ footer { border-top: 1px solid var(--line-soft); padding: 40px 0; background: va
   .nav-links.nav-links-open { padding-left: 20px; padding-right: 20px; }
   .price-grid { gap: 14px; }
   .mini-compare table { min-width: 560px; }
+}
+/* Smallest phones (320–400px): logo, "Get a Demo" and the menu button
+   didn't fit in one row and pushed the page sideways. */
+@media (max-width: 400px) {
+  .nav-inner { padding: 0 14px; }
+  .nav-cta { gap: 10px; }
+  .nav-cta .btn { padding: 10px 14px; font-size: 13px; }
+}
+/* Grid items default to min-width: auto, so a long nowrap button in the hero
+   stretched its column past the screen on small phones. Let hero buttons wrap. */
+.hero-grid > * { min-width: 0; }
+@media (max-width: 400px) {
+  .hero-actions .btn { white-space: normal; text-align: center; }
 }
 
 /* ==========================================================================
